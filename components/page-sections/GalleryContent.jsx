@@ -11,27 +11,7 @@ import { cn } from "@/utils/cn";
 
 const categories = ["All", "Weddings", "Birthdays", "Decor", "SFX & Fireworks", "Entries"];
 
-const galleryImages = [
-  { src: "/photos/wedding-stage.jpg", title: "The Royal Stage", category: "Weddings", type: "image" },
-  { src: "/photos/wedding-1.jpg", title: "Palace Mandap", category: "Weddings", type: "image" },
-  { src: "/videos/hero-main.mp4", title: "Signature Entry", category: "Weddings", type: "video", poster: "/photos/wedding-stage.jpg" },
-  { src: "/photos/wedding-2.jpg", title: "Sangeet Night", category: "Weddings", type: "image" },
-  { src: "/photos/wedding-3.jpg", title: "Reception Decor", category: "Weddings", type: "image" },
-  { src: "/photos/wedding-4.jpg", title: "Bridal Shoot", category: "Weddings", type: "image" },
-  { src: "/photos/haldi-mehndi-decor.jpg", title: "Floral Haldi", category: "Decor", type: "image" },
-  { src: "/photos/ring-ceremonies.jpg", title: "Engagement Set", category: "Entries", type: "image" },
-  { src: "/photos/new-child-welcome.jpg", title: "Nursery Theme", category: "Decor", type: "image" },
-  { src: "/photos/birthday-celebrations.jpg", title: "Themed Party", category: "Birthdays", type: "image" },
-  { src: "/photos/fireworks-array.jpg", title: "Midnight Pyro", category: "SFX & Fireworks", type: "image" },
-  { src: "/photos/stage-sfx-wedding.jpg", title: "Cold Pyro Entry", category: "SFX & Fireworks", type: "image" },
-  { src: "/photos/entries-sfx-1.jpg", title: "Grand Arrival", category: "SFX & Fireworks", type: "image" },
-  { src: "/photos/entries-sfx-2.jpg", title: "Stage Fog", category: "SFX & Fireworks", type: "image" },
-  { src: "/photos/entries-sfx-3.jpg", title: "Mirror Entry", category: "Entries", type: "image" },
-  { src: "/photos/bride-groom-entry.jpg", title: "Classic Entry", category: "Entries", type: "image" },
-  { src: "/photos/golden-mirror-floor.jpg", title: "Golden Aisle", category: "Entries", type: "image" },
-];
-
-export default function GalleryContent() {
+export default function GalleryContent({ initialImages }) {
   const [activeTab, setActiveTab] = useState("All");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -45,9 +25,10 @@ export default function GalleryContent() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
+  const images = initialImages || [];
   const filteredImages = activeTab === "All" 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === activeTab);
+    ? images 
+    : images.filter(img => img.category === activeTab);
 
   const openLightbox = (index) => {
     setLightboxIndex(index);

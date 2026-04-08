@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-export default function HeroSection() {
+export default function HeroSection({ videoUrl, headline, subtext }) {
   return (
     <section className="relative min-h-[85vh] md:min-h-screen md:h-[100svh] w-full flex items-center justify-center overflow-hidden pt-[56px] md:pt-0">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full bg-[#111111]">
         <video
+          key={videoUrl} // Force re-render on video change
           autoPlay
           muted
           loop
@@ -17,7 +18,7 @@ export default function HeroSection() {
           poster="/photos/wedding-stage.jpg"
           className="absolute inset-0 w-full h-full object-cover opacity-50 block"
         >
-          <source src="/videos/hero-main.mp4" type="video/mp4" />
+          <source src={videoUrl || "/videos/hero-main.mp4"} type="video/mp4" />
         </video>
         {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 bg-black/60" />
@@ -32,7 +33,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-[#c9a84c] text-xs md:text-base tracking-[0.3em] uppercase mb-4"
         >
-          Welcome to Galaxy Events
+          {subtext || "Welcome to Galaxy Events"}
         </motion.p>
         
         <motion.h1
@@ -41,7 +42,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.4 }}
           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-semibold text-white leading-[1.2] md:leading-tight mb-8 px-2 w-full"
         >
-          Where Every Moment <br /> Becomes a <span className="text-gold-gradient italic">Memory</span>
+          {headline || "Where Every Moment Becomes a Memory"}
         </motion.h1>
       </div>
     </section>
