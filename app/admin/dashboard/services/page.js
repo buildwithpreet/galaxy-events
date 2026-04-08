@@ -94,13 +94,7 @@ export default async function AdminServicesPage() {
                     />
                   </div>
 
-                  <div className="flex justify-between pt-6 border-t border-white/5">
-                    <form action={async () => { "use server"; await deleteService(service.id); }}>
-                       <button className="flex items-center gap-2 text-[10px] text-red-500/40 hover:text-red-500 tracking-widest uppercase font-black transition-all">
-                         <Trash2 size={12} />
-                         Delete Service
-                       </button>
-                    </form>
+                  <div className="flex justify-end pt-6 border-t border-white/5">
                     <button type="submit" className="flex items-center gap-3 bg-white/5 hover:bg-[#c9a84c] text-white hover:text-black px-8 py-3 transition-all">
                        <Save size={14} />
                        <span className="text-[10px] tracking-widest uppercase font-bold">Save Changes</span>
@@ -109,6 +103,16 @@ export default async function AdminServicesPage() {
                 </div>
               </div>
             </form>
+
+            {/* Delete form - moved outside update form to fix nesting bug */}
+            <div className="flex justify-start mt-4 pt-4 border-t border-white/5">
+              <form action={async () => { "use server"; await deleteService(service.id); }}>
+                <button className="flex items-center gap-2 text-[10px] text-red-500/40 hover:text-red-500 tracking-widest uppercase font-black transition-all">
+                  <Trash2 size={12} />
+                  Delete Service
+                </button>
+              </form>
+            </div>
           </div>
         ))}
       </div>
