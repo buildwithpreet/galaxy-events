@@ -29,8 +29,15 @@ export default function ContactContent() {
     setSubmitStatus("idle");
 
     try {
-      // TODO: Replace with the actual Google Apps Script Web App URL
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_placeholder_url_here/exec";
+      // Accessing the Google Apps Script URL via Environment Variables for security
+      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      
+      if (!GOOGLE_SCRIPT_URL) {
+        console.error("Google Script URL is not defined in Environment Variables.");
+        setSubmitStatus("error");
+        setIsSubmitting(false);
+        return;
+      }
       
       const res = await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
