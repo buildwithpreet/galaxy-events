@@ -40,45 +40,45 @@ export default function HomeContent() {
     <>
       <HeroSection />
 
-      {/* Intro Section */}
-      <section className="py-12 md:py-24 px-4 md:px-6 bg-[#0a0a0a]">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Intro Section - World Class Spacing */}
+      <section className="py-24 md:py-36 px-4 md:px-6 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
-              <h2 className="text-gold-gradient text-sm tracking-[0.3em] uppercase mb-4 font-bold">Our Story</h2>
-              <h3 className="text-4xl md:text-6xl font-heading font-semibold text-white mb-8 leading-tight">
-                Crafting Timeless <br /> Elegance in Hoshangabad
+              <h2 className="text-gold-gradient text-[10px] tracking-[0.5em] uppercase mb-6 font-black">Our Heritage</h2>
+              <h3 className="text-5xl md:text-7xl font-heading font-bold text-white mb-10 leading-[1.1]">
+                Crafting Timeless <br /> <span className="italic font-light">Elegance</span>
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-                At Galaxy Events, we don't just organize events; we design cinematic experiences. With over a decade of expertise, our dedicated team brings your vision to life—ensuring every detail is immaculately styled and perfectly timed.
+              <p className="text-gray-400 text-xl leading-relaxed mb-8 font-light max-w-xl">
+                At Galaxy Events, we don't just organize; we design cinematic experiences. With over a decade of expertise, our team brings your vision to life with immaculate style and perfect timing.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
-                From luxury wedding ceremonies and awe-inspiring SFX entries to grand birthday celebrations, we redefine premium event management in Central India.
-              </p>
-              <Link href="/about" className="inline-block border-b border-[#c9a84c] text-[#c9a84c] pb-1 uppercase tracking-widest text-sm hover:text-white hover:border-white transition-colors duration-300">
-                Discover Our Heritage
+              <Link href="/about" className="group flex items-center gap-4 text-[#c9a84c] tracking-[0.3em] uppercase text-xs font-bold transition-all hover:text-white">
+                <span>The Story</span>
+                <div className="h-[1px] w-12 bg-[#c9a84c] group-hover:w-20 transition-all duration-500" />
               </Link>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-sm overflow-hidden group shadow-[0_0_40px_rgba(201,168,76,0.1)]"
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="relative aspect-[4/5] lg:h-[700px] rounded-sm overflow-hidden"
             >
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10 duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 z-10" />
               <Image
                 src="/photos/wedding-3.jfif"
                 alt="Elegant Indian Wedding Setup"
                 fill
-                className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
             </motion.div>
           </div>
@@ -153,14 +153,14 @@ export default function HomeContent() {
       <section className="py-12 md:py-24 bg-[#0a0a0a]">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-24"
           >
-            <h2 className="text-gold-gradient text-sm tracking-[0.3em] uppercase mb-4 font-bold">Portfolio</h2>
-            <h3 className="text-4xl md:text-6xl font-heading font-semibold text-white">Moments Captured</h3>
+            <h2 className="text-gold-gradient text-[10px] tracking-[0.5em] uppercase mb-6 font-black">Portfolio</h2>
+            <h3 className="text-5xl md:text-7xl font-heading font-bold text-white">Moments Captured</h3>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
