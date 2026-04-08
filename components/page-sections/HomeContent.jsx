@@ -10,21 +10,21 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialSlider from "@/components/TestimonialSlider";
 
 const showcaseServices = [
-  { title: "Premium Weddings", icon: FaGem, desc: "End-to-end luxury wedding planning and execution.", image: "/photos/wedding-stage.jfif" },
-  { title: "Sangeet Management", icon: FaMusic, desc: "Choreography, staging, and musical extravagance.", image: "/photos/wedding-2.jfif" },
-  { title: "SFX & Fireworks", icon: FaFire, desc: "Spectacular pyrotechnics and safe cold fireworks stage entry.", image: "/photos/fireworks-array.jfif" },
-  { title: "Venue Decor", icon: FaLeaf, desc: "Floral arrangements, thematic drapes, and ambient lighting.", image: "/photos/haldi-mehndi-decor.jfif" },
-  { title: "Cinematic Photography", icon: FaCamera, desc: "Capturing your best moments with high-end equipment.", image: "/photos/wedding-4.jfif" },
-  { title: "Birthday Celebrations", icon: FaGlassCheers, desc: "Themed birthday parties for kids and adults alike.", image: "/photos/birthday-celebrations.jfif" },
+  { title: "Premium Weddings", icon: FaGem, desc: "End-to-end luxury wedding planning and execution.", image: "/photos/wedding-stage.jpg" },
+  { title: "Sangeet Management", icon: FaMusic, desc: "Choreography, staging, and musical extravagance.", image: "/photos/wedding-2.jpg" },
+  { title: "SFX & Fireworks", icon: FaFire, desc: "Spectacular pyrotechnics and safe cold fireworks stage entry.", image: "/photos/fireworks-array.jpg" },
+  { title: "Venue Decor", icon: FaLeaf, desc: "Floral arrangements, thematic drapes, and ambient lighting.", image: "/photos/haldi-mehndi-decor.jpg" },
+  { title: "Cinematic Photography", icon: FaCamera, desc: "Capturing your best moments with high-end equipment.", image: "/photos/wedding-4.jpg" },
+  { title: "Birthday Celebrations", icon: FaGlassCheers, desc: "Themed birthday parties for kids and adults alike.", image: "/photos/birthday-celebrations.jpg" },
 ];
 
 const galleryTeaserPhotos = [
-  "/photos/wedding-stage.jfif",
-  "/photos/wedding-2.jfif",
-  "/photos/haldi-mehndi-decor.jfif",
-  "/photos/stage-sfx-wedding.jfif",
-  "/photos/bride-groom-entry.jfif",
-  "/photos/golden-mirror-floor.jfif"
+  "/photos/wedding-stage.jpg",
+  "/photos/wedding-2.jpg",
+  "/photos/haldi-mehndi-decor.jpg",
+  "/photos/stage-sfx-wedding.jpg",
+  "/photos/bride-groom-entry.jpg",
+  "/photos/golden-mirror-floor.jpg"
 ];
 
 export default function HomeContent() {

@@ -11,22 +11,22 @@ import { cn } from "@/utils/cn";
 const categories = ["All", "Weddings", "Birthdays", "Decor", "SFX & Fireworks", "Entries"];
 
 const galleryImages = [
-  { src: "/photos/wedding-stage.jfif", category: "Weddings" },
-  { src: "/photos/wedding-1.jfif", category: "Weddings" },
-  { src: "/photos/wedding-2.jfif", category: "Weddings" },
-  { src: "/photos/wedding-3.jfif", category: "Weddings" },
-  { src: "/photos/wedding-4.jfif", category: "Weddings" },
-  { src: "/photos/haldi-mehndi-decor.jfif", category: "Decor" },
-  { src: "/photos/ring-ceremonies.jfif", category: "Entries" },
-  { src: "/photos/new-child-welcome.jfif", category: "Decor" },
-  { src: "/photos/birthday-celebrations.jfif", category: "Birthdays" },
-  { src: "/photos/fireworks-array.jfif", category: "SFX & Fireworks" },
-  { src: "/photos/stage-sfx-wedding.jfif", category: "SFX & Fireworks" },
-  { src: "/photos/entries-sfx-1.jfif", category: "SFX & Fireworks" },
-  { src: "/photos/entries-sfx-2.jfif", category: "SFX & Fireworks" },
-  { src: "/photos/entries-sfx-3.jfif", category: "Entries" },
-  { src: "/photos/bride-groom-entry.jfif", category: "Entries" },
-  { src: "/photos/golden-mirror-floor.jfif", category: "Entries" },
+  { src: "/photos/wedding-stage.jpg", category: "Weddings" },
+  { src: "/photos/wedding-1.jpg", category: "Weddings" },
+  { src: "/photos/wedding-2.jpg", category: "Weddings" },
+  { src: "/photos/wedding-3.jpg", category: "Weddings" },
+  { src: "/photos/wedding-4.jpg", category: "Weddings" },
+  { src: "/photos/haldi-mehndi-decor.jpg", category: "Decor" },
+  { src: "/photos/ring-ceremonies.jpg", category: "Entries" },
+  { src: "/photos/new-child-welcome.jpg", category: "Decor" },
+  { src: "/photos/birthday-celebrations.jpg", category: "Birthdays" },
+  { src: "/photos/fireworks-array.jpg", category: "SFX & Fireworks" },
+  { src: "/photos/stage-sfx-wedding.jpg", category: "SFX & Fireworks" },
+  { src: "/photos/entries-sfx-1.jpg", category: "SFX & Fireworks" },
+  { src: "/photos/entries-sfx-2.jpg", category: "SFX & Fireworks" },
+  { src: "/photos/entries-sfx-3.jpg", category: "Entries" },
+  { src: "/photos/bride-groom-entry.jpg", category: "Entries" },
+  { src: "/photos/golden-mirror-floor.jpg", category: "Entries" },
 ];
 
 export default function GalleryContent() {

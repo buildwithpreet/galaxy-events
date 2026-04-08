@@ -14,7 +14,7 @@ export default function HeroSection() {
           muted
           loop
           playsInline
-          poster="/photos/wedding-stage.jfif"
+          poster="/photos/wedding-stage.jpg"
           className="absolute inset-0 w-full h-full object-cover opacity-50 block"
         >
           <source src="/videos/hero-main.mp4" type="video/mp4" />

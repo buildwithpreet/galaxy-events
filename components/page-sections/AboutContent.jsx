@@ -45,7 +45,7 @@ export default function AboutContent() {
               className="relative aspect-square rounded-sm overflow-hidden border border-white/10"
             >
               <Image
-                src="/photos/wedding-1.jfif"
+                src="/photos/wedding-1.jpg"
                 alt="Galaxy Events Setup"
                 fill
                 className="object-cover"
@@ -102,7 +102,7 @@ export default function AboutContent() {
               >
                 <div className="aspect-[3/4] relative overflow-hidden mb-6 bg-[#1a1a1a] border border-white/5 grayscale group-hover:grayscale-0 transition-all duration-500 rounded-sm">
                   <Image
-                    src="/photos/wedding-3.jfif"
+                    src="/photos/wedding-3.jpg"
                     alt="Team Member Placeholder"
                     fill
                     className="object-cover"
